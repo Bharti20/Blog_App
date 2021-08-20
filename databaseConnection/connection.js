@@ -10,7 +10,7 @@ const con = mysql.createConnection({
 con.connect((err) => {
     if(err) throw err;
     console.log('Database connected')
-    sql = 'create table if not exists user_details (email varchar(255),password varchar(255), likes int, dislikes int)'
+    sql = 'create table if not exists user_details (user_name varchar(255), email varchar(255) primary key,password varchar(255))'
     con.query(sql, (err) => {
         if(err) throw err;
         console.log('Table has created')

@@ -11,7 +11,6 @@ module.exports.create_posts = (req, res) => {
             console.log(verifiedJwt)
             let userEmail = verifiedJwt['email']
             let post_data = {
-                id: req.body.id,
                 user_email:userEmail,
                 posts: req.body.posts
             }

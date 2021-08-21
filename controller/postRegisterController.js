@@ -17,7 +17,7 @@ module.exports.register = (req,res) =>{
         con.query('insert into user_details set?', data, function(err, result){
             if(err) throw err;
             console.log('data has inserted')
-            res.send(token)
+            res.send('Data has inserted')
         });
 };
 

@@ -15,7 +15,7 @@ module.exports.create_posts = (req, res) => {
                 user_email:userEmail,
                 posts: req.body.posts
             }
-            connection.query('INSERT INTO posts_details set?',post_data ,(err, result) => {
+            connection.query('INSERT INTO all_posts set?',post_data ,(err, result) => {
                 if(err) throw err;
                 console.log('post created')
                 res.send('post created')

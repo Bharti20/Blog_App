@@ -8,7 +8,6 @@ const callingApis = require('./routes/index')
 
 app.use('/', callingApis)
 
-
 app.listen(8000, (err) => {
     if(err) throw err;
     console.log('server running........')

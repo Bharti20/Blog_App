@@ -7,8 +7,8 @@ module.exports.register = (req,res) =>{
         }
         con.query('insert into user_details set?', data, function(err, result){
             if(err) throw err;
-            console.log('data has inserted')
-            res.send('Data has inserted')
+            console.log('user signup successfully')
+            res.send('user signup successfully')
         });
 };
 

@@ -18,7 +18,8 @@ module.exports.log_in = (req, res) => {
             }
             const token = jwt.sign(d_token, process.env.SECRET_KEY )
             console.log('User verified')
-            res.send(token)
+            res.send(`user login successfully
+             token:${token}`)
 
         }else{
             console.log('invalid email/password')
